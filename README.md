@@ -26,7 +26,7 @@ Load balancing ensures that the application will be <b>highly-available</b>, in 
 
 The <b>jump box</b> on the other hand restricts access to the infrastructure by only allowing a signle point of entry to the other VM's on the network.  The access to the jump box is controlled by the firewall settings by allowing the jump box to connect to the other VM's while denying access to all other machines outside of the jump box.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the <b>traffic</b> and system <b>logs</b>.
 - Filebeat watches for the <b>heartbeat</b>.
 - Metricbeat records system <b>metrics</b>.
 

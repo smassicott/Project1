@@ -49,7 +49,7 @@ Only the Jump Box 40.114.3.172 can accept connections from the Internet. Access 
 - 76.105.118.41
 
 Machines within the network can only be accessed by the Jump Box on 10.0.0.4.
-- The Elk VM is also accessible by the Jump Box on 40.114.3.721
+- The Elk VM is also accessible by the Jump Box on 40.114.3.172
 
 A summary of the access policies in place can be found in the table below.
 <b>The network security group has the following rules in place to allow traffice:</b>

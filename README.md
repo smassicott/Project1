@@ -28,36 +28,43 @@ The <b>jump box</b> on the other hand restricts access to the infrastructure by 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - Filebeat watches for the <b>heartbeat</b>.
-- _TODO: What does Metricbeat record?_
+- Metricbeat records system <b>metrics</b>.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| ELK VM   | ELK STACK| 10.2.0.4   | Linux            |
+| WEB-1    | WEB APPS | 10.0.0.5   | Linux            |
+| WEB-2    | WEB APPS | 10.0.0.6   | Linux            |
+| WEB-3    | WEB APPS | 10.0.0.7   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box 40.114.3.172 can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- 76.105.118.41
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Jump Box on 10.0.0.4.
+- The Elk VM is also accessible by the Jump Box on 40.114.3.721
 
 A summary of the access policies in place can be found in the table below.
-
+<b>The network security group has the following rules in place to allow traffice:</b>
+-TCP over port 80 from 76.105.118.41 is allowed to VNET
+-SSH over port 22 from 76.105.118.41 is allowed to VNET
+-TCP over port 8080 from the Red Team Load Balancer (13.68.145.98) to VNET
+-TCP over port 5601 from any to any for DVWA container
+-TCP over port 22 for Ansible from WEB-1113 to Public
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
-
+| Jump Box | Yes/No              | 76.105.118.41 /Any VN|
+| ElkVM    | Yes                 |                      |
+| Web1     | No                  |                      |
+| Web2     | No                  |
+| Web3     | No                  |
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...

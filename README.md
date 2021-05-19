@@ -8,8 +8,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
   <a href="ansible/install-elk.yml">Install Elk Playbook File</a>
 
-This document contains the following details:
-- Description of the Topologu
+<b>This document contains the following details:</b>
+
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -19,9 +20,9 @@ This document contains the following details:
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the <i>D*mn Vulnerable Web Application</i>.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be <b>highly-available</b>, in addition to restricting <b>access</b> to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.

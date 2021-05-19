@@ -22,7 +22,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the <i>D*mn Vulnerable Web Application</i>.
 
-Load balancing ensures that the application will be <b>highly-available</b>, in addition to restricting <b>access</b> to the network.  The <b>load balancer protects availability of a resource by restricting traffice.  
+Load balancing ensures that the application will be <b>highly-available</b>, in addition to restricting <b>access</b> to the network.  The <b>load balancer</b> protects availability of a resource by restricting traffic based on a predefined set of rules.  As traffic peaks the load balancer watches for suspicous patterns in traffic and can deny traffic as needed.
 
 The <b>jump box</b> on the other hand restricts access to the infrastructure by only allowing a signle point of entry to the other VM's on the network.  The access to the jump box is controlled by the firewall settings by allowing the jump box to connect to the other VM's while denying access to all other machines outside of the jump box.
 

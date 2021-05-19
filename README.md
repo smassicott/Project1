@@ -26,7 +26,7 @@ Load balancing ensures that the application will be <b>highly-available</b>, in 
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
+- Filebeat watches for the <b>heartbeat</b>.
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.

@@ -31,7 +31,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat records system <b>metrics</b>.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -117,12 +117,12 @@ Configure your ansible host file with the VM connection information
 -  run <b><i>nano hosts</i></b>
 -  Add the server IP's for connecitivy
    <div>
-     [webservers]
-      ## alpha.example.org
-      ## 192.168.1.110
-      10.0.0.5 ansible_python_interpreter=/usr/bin/python3
-      10.0.0.6 ansible_python_interpreter=/usr/bin/python3
-      10.0.0.7 ansible_python_interpreter=/usr/bin/python3
+     [webservers]<br>
+      ## alpha.example.org<br>
+      ## 192.168.1.110<br>
+      10.0.0.5 ansible_python_interpreter=/usr/bin/python3<br>
+      10.0.0.6 ansible_python_interpreter=/usr/bin/python3<br>
+      10.0.0.7 ansible_python_interpreter=/usr/bin/python3v
 
      [elk]
       10.2.0.4 ansible_python_interpreter=/usr/bin/python3
@@ -133,15 +133,15 @@ Configure your ansible host file with the VM connection information
 -  Use curl 52.152.50.56:5601/app/kibana to verify the installation
 
 **Bonus**
-	Execute the playbook:
-	 -ansible-playbook myplaybookname.yml
- 	List running containers
- 	 -sudo docker container list -a
-	Start a container
-	 -sudo docker start c59aabc03414
-	Attach into a container
-	 -sudo docker attach 101552279c39
-	Verify ansible connectivity to configured servers
-	 -ansible -m ping all
-	Edit hosts file
-	 -nano {hosts file name}
+	Execute the playbook:<br>
+	 -ansible-playbook myplaybookname.yml<br>
+ 	List running containers<br>
+ 	 -sudo docker container list -av
+	Start a container<br>
+	 -sudo docker start c59aabc03414v
+	Attach into a container<br>
+	 -sudo docker attach 101552279c39<br>
+	Verify ansible connectivity to configured servers<br>
+	 -ansible -m ping all<br>
+	Edit hosts filev
+	 -nano {hosts file name}<br>

@@ -61,19 +61,21 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes/No              | 76.105.118.41 /Any VN|
-| ElkVM    | Yes                 |                      |
-| Web1     | No                  |                      |
-| Web2     | No                  |
-| Web3     | No                  |
+| ElkVM    | Yes                 | 40.114.3.72          |
+| Web1     | No                  | 10.0.0.4             |
+| Web2     | No                  | 10.0.0.4             |
+| Web3     | No                  | 10.0.0.4             |
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- Software can be deployed to mutiple boxes at scale remotely from one box.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Configure the Elk VM with Docker by downloading the docker.io file and phython3
+- Install docker and python if needed on each VM
+- Adust the memory for each VM to meet the minimum requirements
+- Download the docker container image (sebp/elk:791) and activate it on each VM
+- Enable the docker service to start on reboot
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 

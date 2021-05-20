@@ -43,7 +43,7 @@ The configuration details of each machine may be found below.
 
 ### Access Policies
 
-The machines on the internal network are not exposed to the public Internet. 
+The machines on the internal network are not exposed to the public Internet.   Authentication is handled with a public/private key pair.  The public key is registered on the jump box and the ansible container to the VM's on the virtual network.
 
 Only the Jump Box 40.114.3.172 can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - 76.105.118.41

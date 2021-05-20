@@ -24,7 +24,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be <b>highly-available</b>, in addition to restricting <b>access</b> to the network.  The <b>load balancer</b> protects availability of a resource by restricting traffic based on a predefined set of rules.  As traffic peaks the load balancer watches for suspicous patterns in traffic and can deny traffic as needed.
 
-The <b>jump box</b> on the other hand restricts access to the infrastructure by only allowing a signle point of entry to the other VM's on the network.  The access to the jump box is controlled by the firewall settings by allowing the jump box to connect to the other VM's while denying access to all other machines outside of the jump box.
+The <b>jump box</b> on the other hand restricts access to the infrastructure by only allowing a single point of entry to the other VM's on the network.  The access to the jump box is controlled by the firewall settings by allowing the jump box to connect to the other VM's while denying access to all other machines outside of the jump box.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the <b>traffic</b> and system <b>logs</b>.
 - Filebeat watches for the <b>heartbeat</b>.
@@ -110,12 +110,11 @@ SSH into the control node and follow the steps below:
    - <i>sudo docker start {container#}</i> (start the container if it's not running)
    - <i>sudo docker attach {container#}</i> (attach to the container)
    - From the container verify everything is working with Use <b>curl 52.152.50.56:5601/app/kibana</b>
-_TODO: Answer the following questions to fill in the blanks:_
 
 Configure your ansible host file with the VM connection information
 -  From your ansible container on the JUMP-BOX.  
 -  cd /etc/ansible
--  run <i>nano hosts</i>
+-  run <b><i>nano hosts</i></b>
 -  Add the server IP's for connecitivy
    <div>
      [webservers]
@@ -128,14 +127,21 @@ Configure your ansible host file with the VM connection information
      [elk]
       10.2.0.4 ansible_python_interpreter=/usr/bin/python3
    </div>
--  test the connectivity with <i>ansible -m ping all</i>
--  
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- Use curl 52.152.50.56:5601/app/kibana
+-  Make sure you've included the ELK-VM IP under a new tag named [elk] as shown above in the example.
+-  Make sure you've updated the web server IP's on the virtual network so the beats can be installed.
+-  Test the connectivity with <i>ansible -m ping all</i>
+-  Use curl 52.152.50.56:5601/app/kibana to verify the installation
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-	ansible-playbook 
- sudo docker container list -a
-	sudo docker start c59aabc03414
-	sudo docker attach 101552279c39
-	ansible -m ping all
+**Bonus**
+	Execute the playbook:
+	 -ansible-playbook myplaybookname.yml
+ 	List running containers
+ 	 -sudo docker container list -a
+	Start a container
+	 -sudo docker start c59aabc03414
+	Attach into a container
+	 -sudo docker attach 101552279c39
+	Verify ansible connectivity to configured servers
+	 -ansible -m ping all
+	Edit hosts file
+	 -nano {hosts file name}

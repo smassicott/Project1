@@ -100,8 +100,8 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the playbook and configuration files to the /etc/ansible/ folders
-   - copy filebeat-install.yml, & metricbeat-intall.yml to the <b>ROLES</b> folder
-   - copy filebeat-config.yml and metricbeate-config.yml to the <b>ROLES</b> folder
+   - copy <i>filebeat-install.yml</i>, & <i>metricbeat-intall.yml</i> to the <b>ROLES</b> folder
+   - copy <i>filebeat-config.yml</i> and <i>metricbeat-config.yml</i> to the <b>ROLES</b> folder
 - Make sure the configuration files have the correct kibana IP and login information
 - Make sure the playbook files have the correct file path referencing the configuration file locations
 - Run the playbook with ansible-playbook filebeat-install.yml and ansible-playbook metricbeat-install.yml

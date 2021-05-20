@@ -136,12 +136,12 @@ Configure your ansible host file with the VM connection information
 	Execute the playbook:<br>
 	 -ansible-playbook myplaybookname.yml<br>
  	List running containers<br>
- 	 -sudo docker container list -av
+ 	 -sudo docker container list -a<br>
 	Start a container<br>
-	 -sudo docker start c59aabc03414v
+	 -sudo docker start c59aabc03414v<br>
 	Attach into a container<br>
 	 -sudo docker attach 101552279c39<br>
 	Verify ansible connectivity to configured servers<br>
 	 -ansible -m ping all<br>
-	Edit hosts filev
+	Edit hosts files<br>
 	 -nano {hosts file name}<br>

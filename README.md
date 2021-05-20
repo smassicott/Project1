@@ -51,13 +51,14 @@ Only the Jump Box 40.114.3.172 can accept connections from the Internet. Access 
 Machines within the network can only be accessed by the Jump Box on 10.0.0.4.
 - The Elk VM is also accessible by the Jump Box on 40.114.3.172
 
-A summary of the access policies in place can be found in the table below.
-<b>The network security group has the following rules in place to allow traffice:</b>
--TCP over port 80 from 76.105.118.41 is allowed to VNET
--SSH over port 22 from 76.105.118.41 is allowed to VNET
--TCP over port 8080 from the Red Team Load Balancer (13.68.145.98) to VNET
--TCP over port 5601 from any to any for DVWA container
--TCP over port 22 for Ansible from WEB-1113 to Public
+A summary of the access policies in place can be found in the table below.<br>
+<b>The network security group has the following rules in place to allow traffic:</b><br>
+-TCP over port 80 from 76.105.118.41 is allowed to VNET<br>
+-SSH over port 22 from 76.105.118.41 is allowed to VNET<br>
+-TCP over port 8080 from the Red Team Load Balancer (13.68.145.98) to VNET<br>
+-TCP over port 5601 from any to any for DVWA container<br>
+-TCP over port 22 for Ansible from WEB-1113 to Public<br>
+
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes/No              | 76.105.118.41 /Any VN|

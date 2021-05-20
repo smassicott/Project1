@@ -99,12 +99,20 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
-
+- Copy the playbook and configuration files to the /etc/ansible/ folders
+   - copy filebeat-install.yml, & metricbeat-intall.yml to the <b>ROLES</b> folder
+   - copy filebeat-config.yml and metricbeate-config.yml to the <b>ROLES</b> folder
+- Make sure the configuration files have the correct kibana IP and login information
+- Make sure the playbook files have the correct file path referencing the configuration file locations
+- Run the playbook with ansible-playbook filebeat-install.yml and ansible-playbook metricbeat-install.yml
+- Connect to Web 3 ssh azadmin@10.0.07 to verify the install.
+   - <i>sudo docker container list -a</i> (see the status of the running containers) Get the ID of the container
+   - <i>sudo docker start {container#}</i> (start the container if it's not running)
+   - <i>sudo docker attach {container#}</i> (attach to the container)
+   - From the container verify everything is working with Use curl 52.152.50.56:5601/app/kibana
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
+
+Configure your ansible host file with the VM connection information
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - Use curl 52.152.50.56:5601/app/kibana
 

@@ -109,10 +109,27 @@ SSH into the control node and follow the steps below:
    - <i>sudo docker container list -a</i> (see the status of the running containers) Get the ID of the container
    - <i>sudo docker start {container#}</i> (start the container if it's not running)
    - <i>sudo docker attach {container#}</i> (attach to the container)
-   - From the container verify everything is working with Use curl 52.152.50.56:5601/app/kibana
+   - From the container verify everything is working with Use <b>curl 52.152.50.56:5601/app/kibana</b>
 _TODO: Answer the following questions to fill in the blanks:_
 
 Configure your ansible host file with the VM connection information
+-  From your ansible container on the JUMP-BOX.  
+-  cd /etc/ansible
+-  run <i>nano hosts</i>
+-  Add the server IP's for connecitivy
+   <div>
+     [webservers]
+      ## alpha.example.org
+      ## 192.168.1.110
+      10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+      10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+      10.0.0.7 ansible_python_interpreter=/usr/bin/python3
+
+     [elk]
+      10.2.0.4 ansible_python_interpreter=/usr/bin/python3
+   </div>
+-  test the connectivity with <i>ansible -m ping all</i>
+-  
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - Use curl 52.152.50.56:5601/app/kibana
 

@@ -39,7 +39,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | ELK VM   | ELK STACK| 10.2.0.4   | Linux            |
 | WEB-1    | WEB APPS | 10.0.0.5   | Linux            |
 | WEB-2    | WEB APPS | 10.0.0.6   | Linux            |
-| WEB-3    | WEB APPS | 10.0.0.7   | Linux            |
+| WEB-3    | DVWA     | 10.0.0.7   | Linux            |
 
 ### Access Policies
 

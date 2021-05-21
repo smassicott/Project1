@@ -20,7 +20,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the <i>D*mn Vulnerable Web Application</i>.
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the <i>DVWM Vulnerable Web Application</i>.
 
 Load balancing ensures that the application will be <b>highly-available</b>, in addition to restricting <b>access</b> to the network.  The <b>load balancer</b> protects availability of a resource by restricting traffic based on a predefined set of rules.  As traffic peaks the load balancer watches for suspicous patterns in traffic and can deny traffic as needed.
 
